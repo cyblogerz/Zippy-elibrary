@@ -68,6 +68,9 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     BookTile(),
+                    BookTile(),
+                    BookTile(),
+                    BookTile(),
                   ],
                 ),
               ),
