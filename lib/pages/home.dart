@@ -49,10 +49,10 @@ class Home extends StatelessWidget {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  CatTag(color: Colors.red, tag: 'True Crime'),
-                  CatTag(color: Colors.green, tag: 'Science Fiction Fantasy')
+                  CatTag(color: Colors.teal, tag: 'True Crime'),
+                  CatTag(color: Colors.pink, tag: 'Science Fiction Fantasy')
                 ],
               ),
               Padding(

@@ -14,7 +14,7 @@ class CatTag extends StatelessWidget {
       child: Card(
         margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
         color: color,
         shadowColor: color,
         child: Padding(
