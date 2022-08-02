@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zippy/widgets/book_tile.dart';
 import 'package:zippy/widgets/search_bar.dart';
 
 import '../widgets/cat_tag.dart';
@@ -53,6 +54,22 @@ class Home extends StatelessWidget {
                   CatTag(color: Colors.red, tag: 'True Crime'),
                   CatTag(color: Colors.green, tag: 'Science Fiction Fantasy')
                 ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: Text(
+                  'Trending now',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    BookTile(),
+                  ],
+                ),
               ),
             ],
           ),
