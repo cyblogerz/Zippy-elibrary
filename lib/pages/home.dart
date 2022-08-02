@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zippy/widgets/search_bar.dart';
 
+import '../widgets/cat_tag.dart';
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         drawer: Drawer(),
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.black),
@@ -29,6 +32,28 @@ class Home extends StatelessWidget {
                 ),
               ),
               SearchBar(),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: Text(
+                  'Popular Genre',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  CatTag(color: Colors.red, tag: '📖 Novel'),
+                  CatTag(color: Colors.blue, tag: '⚡ Self-Help'),
+                  CatTag(color: Colors.green, tag: 'Fantasy')
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  CatTag(color: Colors.red, tag: 'True Crime'),
+                  CatTag(color: Colors.green, tag: 'Science Fiction Fantasy')
+                ],
+              ),
             ],
           ),
         ));
