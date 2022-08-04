@@ -11,12 +11,12 @@ class BookDetailsPage extends StatelessWidget {
           Column(
             children: <Widget>[
               Container(
-                color: Colors.red,
+                color: Colors.grey,
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.5,
               ),
               Container(
-                color: Colors.green,
+                color: Colors.white,
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.5,
               )
@@ -27,8 +27,11 @@ class BookDetailsPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(right: 10.0),
               child: FloatingActionButton(
+                backgroundColor: Color(0xffFF415D),
                 onPressed: () {},
-                child: Icon(Icons.favorite_rounded),
+                child: Icon(
+                  Icons.favorite_rounded,
+                ),
               ),
             ),
           ),
@@ -53,6 +56,26 @@ class BookDetailsPage extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.all(26.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32.0),
+                  ))),
+                  onPressed: () {},
+                  child: Padding(
+                      padding: EdgeInsets.all(18),
+                      child: Text('Start reading')),
+                ),
               ),
             ),
           )

@@ -12,7 +12,7 @@ class CatTag extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Card(
-        margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
+        margin: EdgeInsets.symmetric(vertical: 5.0),
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
         color: color,
