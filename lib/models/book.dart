@@ -1,14 +1,12 @@
 class Book {
   final String title;
   final String author;
-  final int rating;
-  final String descr;
-  final String url;
+  final String thumbnailUrl;
+  final String description;
 
   Book(
-      {required this.author,
-      required this.rating,
-      required this.descr,
-      required this.url,
-      required this.title});
+      {required this.title,
+      required this.author,
+      required this.thumbnailUrl,
+      required this.description});
 }

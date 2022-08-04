@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zippy/pages/book_details.dart';
+import 'package:zippy/widgets/rating.dart';
 
 class BookTile extends StatelessWidget {
   const BookTile({Key? key}) : super(key: key);
@@ -23,30 +24,7 @@ class BookTile extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              Positioned(
-                right: 10,
-                top: 10,
-                child: Container(
-                  padding: EdgeInsets.all(5),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.star,
-                        color: Color(0xffFFBE36),
-                        size: 14,
-                      ),
-                      Text(
-                        '4.7',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 10),
-                      )
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      color: Color(0xffFBFBFB),
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-              ),
+              Positioned(right: 10, top: 10, child: Rating()),
             ]),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
