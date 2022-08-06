@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zippy">
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+     <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="zippy"
         android:name="${applicationName}"
@@ -33,5 +35,5 @@
             android:value="2" />
          
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+    
 </manifest>
