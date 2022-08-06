@@ -1,4 +1,4 @@
-<p align="center"><a href="https://cyblogerz.github.io"><img width="80%" alt="Zippy-elibrary" src="./readme-assets/header.png" /></a></p>
+<p align="center"><a href="https://cyblogerz.github.io"><img width="100%" alt="Zippy-elibrary" src="./readme-assets/header.png" /></a></p>
 
 ## Getting Started
 
