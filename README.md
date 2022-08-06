@@ -1,12 +1,20 @@
-# 📖📖 Zippy - Flutter eLibrary App 
+# 📖📖 Zippy - Flutter eLibrary App  
 
 <p align="center"><a href="https://cyblogerz.github.io"><img width="100%" alt="Zippy-elibrary" src="./readme-assets/header.png" /></a></p>
 
+ 
 ## A simple Flutter app to explore books. 
+
+
 
 <p align="center"><a href="http://www.api.google.com/"><img src="./readme-assets/google.gif" width="50%"/></a></p>
 
 The Books included in the app are provided by the google books api.
+<br>
+
+<br>
+
+## [**Click here to download the apk**](https://github.com/cyblogerz/Zippy-elibrary/releases/download/v/app-release.apk)  
 <br>
 <br>
 
