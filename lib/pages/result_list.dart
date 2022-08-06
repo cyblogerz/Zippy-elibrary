@@ -53,11 +53,22 @@ class _ResultListState extends State<ResultList> {
         return true;
       },
       child: ListView.builder(
-          itemCount: searchResults.length,
-          itemBuilder: (ctx, index) => ChangeNotifierProvider.value(
+          itemCount: searchResults.length + 1,
+          itemBuilder: (ctx, index) {
+            if (index < searchResults.length) {
+              return ChangeNotifierProvider.value(
                 value: searchResults[index],
                 child: BookListTile(searchResults[index]),
-              )),
+              );
+            } else {
+              return const Padding(
+                padding: EdgeInsets.symmetric(vertical: 32),
+                child: Center(
+                  child: CircularProgressIndicator(),
+                ),
+              );
+            }
+          }),
     ));
   }
 }

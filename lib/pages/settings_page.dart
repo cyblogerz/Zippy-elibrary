@@ -12,14 +12,25 @@ class SettingsPage extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(20),
           width: MediaQuery.of(context).size.width * 0.5,
-          decoration: BoxDecoration(boxShadow: [
-            BoxShadow(
-                color: Color.fromARGB(110, 158, 158, 158),
-                spreadRadius: 5,
-                blurRadius: 10,
-                offset: Offset(0, 5))
-          ], borderRadius: BorderRadius.circular(32), color: Colors.white),
-          child: Text('This is a demo app developed for SECURE dev Task'),
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.purple, Colors.deepPurple, Colors.blueAccent],
+                begin: Alignment.bottomRight,
+                end: Alignment.topLeft,
+              ),
+              boxShadow: [
+                BoxShadow(
+                    color: Color.fromARGB(75, 124, 77, 255),
+                    spreadRadius: 5,
+                    blurRadius: 10,
+                    offset: Offset(0, 5))
+              ],
+              borderRadius: BorderRadius.circular(32),
+              color: Colors.white),
+          child: Text(
+            'This is a demo app developed for SECURE dev Task',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
     );

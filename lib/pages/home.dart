@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:zippy/utils/book_view.dart';
-import 'package:zippy/pages/explore_page.dart';
+import 'package:zippy/pages/pdf_landing.dart';
 import 'package:zippy/pages/settings_page.dart';
 import 'package:zippy/providers/bookData.dart';
 import 'package:zippy/widgets/book_tile.dart';
@@ -85,7 +85,7 @@ class _HomeState extends State<Home> {
             child: Column(
               children: <Widget>[
                 UserAccountsDrawerHeader(
-                    decoration: BoxDecoration(color: Colors.pink),
+                    decoration: BoxDecoration(color: Color(0xff6540FF)),
                     currentAccountPicture: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.network(
