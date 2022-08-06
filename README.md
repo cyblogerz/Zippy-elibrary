@@ -8,6 +8,7 @@ A simple Flutter app to explore books. The Books included in the app are provide
 ## 📸 ScreenShots
 
 <!-- <img src="ss/mockup.png"/> -->
+<img src="./readme-assets/ss1.jpeg"width="400"> 
 
 |                                                  |                                                  |
 | -------------------------------------------------| -------------------------------------------------|
