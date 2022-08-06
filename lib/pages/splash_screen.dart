@@ -27,17 +27,20 @@ class _SplashState extends State<Splash> {
       bookData.addnovels();
       Navigator.pushNamed(context, Home.id);
     });
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Home())));
   }
 
   @override
   Widget build(BuildContext context) {
-    Timer(
-        Duration(seconds: 3),
-        () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => Home())));
     return Scaffold(
         body: Center(
-      child: CircularProgressIndicator(),
-    ));
+            child: Icon(
+      Icons.bolt,
+      color: Colors.yellow,
+      size: 100,
+    )));
   }
 }

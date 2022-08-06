@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 showAlertDialog(BuildContext context) {
-  // Create button
   Widget okButton = ElevatedButton(
     child: Text("OK"),
     onPressed: () {
@@ -9,7 +8,6 @@ showAlertDialog(BuildContext context) {
     },
   );
 
-  // Create AlertDialog
   AlertDialog downloadAlert = AlertDialog(
     title: Text("Important Notice"),
     content: Text(
@@ -19,7 +17,6 @@ showAlertDialog(BuildContext context) {
     ],
   );
 
-  // show the dialog
   showDialog(
     context: context,
     builder: (BuildContext context) {

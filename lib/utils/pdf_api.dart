@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
-import 'package:zippy/pages/result_list.dart';
 
 Future pickFile() async {
   final res = await FilePicker.platform.pickFiles(

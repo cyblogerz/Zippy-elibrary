@@ -81,7 +81,53 @@ class _HomeState extends State<Home> {
             ],
           ),
           backgroundColor: Colors.white,
-          drawer: Drawer(),
+          drawer: Drawer(
+            child: Column(
+              children: <Widget>[
+                UserAccountsDrawerHeader(
+                    decoration: BoxDecoration(color: Colors.pink),
+                    currentAccountPicture: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                          'https://avatars.githubusercontent.com/u/74711322?v=4'),
+                    ),
+                    accountName: Text('NewUser'),
+                    accountEmail: Text('userNew@email.com')),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(
+                    Icons.info_outline_rounded,
+                    size: 25,
+                  ),
+                  title: Text('About'),
+                ),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(
+                    Icons.catching_pokemon_rounded,
+                    size: 25,
+                  ),
+                  title: Text('View Project on Github'),
+                ),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(
+                    Icons.change_circle_outlined,
+                    size: 25,
+                  ),
+                  title: Text('ChangeLogs'),
+                ),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(
+                    Icons.bug_report,
+                    size: 25,
+                  ),
+                  title: Text('Bug Reports'),
+                )
+              ],
+            ),
+          ),
           appBar: AppBar(
             // automaticallyImplyLeading: false,
             iconTheme: IconThemeData(color: Colors.black),
