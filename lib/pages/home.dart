@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
           bottomNavigationBar: DotNavigationBar(
             currentIndex: _currentIndex,
             onTap: changePage,
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                   color: Color.fromARGB(110, 158, 158, 158),
                   spreadRadius: 5,

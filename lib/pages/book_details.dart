@@ -48,7 +48,7 @@ class BookDetailsPage extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             book.title.toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 24),
                           ),
                           Padding(
@@ -56,16 +56,16 @@ class BookDetailsPage extends StatelessWidget {
                             child: Text(book.author.toString()),
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Padding(
-                                padding: const EdgeInsets.only(right: 10.0),
+                                padding: EdgeInsets.only(right: 10.0),
                                 child: SizedBox(width: 44, child: Rating()),
                               ),
                               Text("(52 Ratings)")
                             ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 10.0),
                             child: Text(
                               "Description",
                               style: TextStyle(color: Colors.grey),
@@ -78,7 +78,7 @@ class BookDetailsPage extends StatelessWidget {
                             trimMode: TrimMode.Line,
                             trimCollapsedText: 'Read more',
                             trimExpandedText: 'Show less',
-                            moreStyle: TextStyle(
+                            moreStyle: const TextStyle(
                                 overflow: TextOverflow.fade,
                                 color: Colors.blue,
                                 fontSize: 14,
