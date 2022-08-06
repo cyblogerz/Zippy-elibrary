@@ -1,14 +1,17 @@
+# 📖📖 Zippy - Flutter eLibrary App 
+
 <p align="center"><a href="https://cyblogerz.github.io"><img width="100%" alt="Zippy-elibrary" src="./readme-assets/header.png" /></a></p>
 
-## Getting Started
+A simple Flutter app to explore books. The Books included in the app are provided by the google books api.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## 📸 ScreenShots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<!-- <img src="ss/mockup.png"/> -->
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+|                                                  |                                                  |
+| -------------------------------------------------| -------------------------------------------------|
+| <img src="./readme-assets/ss1.jpeg"width="400">  | <img src="./readme-assets/ss2.jpeg"width="400">  |
+| <img src="./readme-assets/ss3.jpeg"width="400">  | <img src="./readme-assets/ss4.jpeg"width="400">  |
+| <img src="./readme-assets/ss5.jpeg"width="400">  | <img src="./readme-assets/ss6.jpeg"width="400">  |
+| <img src="./readme-assets/ss7.jpeg"width="400">  | <img src="./readme-assets/ss8.jpeg"width="400">  |
