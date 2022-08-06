@@ -54,6 +54,6 @@ The Books included in the app are provided by the google books api.
 | Name                                                    | Usage                                               |
 | ------------------------------------------------------- | --------------------------------------------------- |
 | [**Provider**](https://pub.dev/packages/provider)       | State Management                                    |
-| [**Flutter PDF View**](https://pub.dev/packages/flutter_pdfview)      | load PDF file within app               | 
+| [**Flutter PDF View**](https://pub.dev/packages/flutter_pdfview)      | Load PDF files within app               | 
 
 
