@@ -28,18 +28,18 @@ class _SplashState extends State<Splash> {
       Navigator.pushNamed(context, Home.id);
     });
     Timer(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Home())));
+            context, MaterialPageRoute(builder: (context) => const Home())));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         body: Center(
             child: Icon(
       Icons.bolt,
-      color: Colors.yellow,
+      color: Colors.purple,
       size: 100,
     )));
   }
