@@ -34,14 +34,3 @@ List<Book> _parseBookJson(String jsonStr) {
               : 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'))
       .toList();
 }
-
-// Future<List> fetchData() async {
-//   final results = await Future.wait([
-//     getBooksData(trending_url),
-//     getBooksData(adventure_url),
-//     getBooksData(novel_url),
-//     getBooksData(fantasy_url)
-//   ]);
-
-//   return results;
-// }

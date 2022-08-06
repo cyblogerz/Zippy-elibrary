@@ -68,16 +68,16 @@ class _HomeState extends State<Home> {
             items: [
               DotNavigationBarItem(
                   icon: Icon(Icons.home, size: 25),
-                  selectedColor: Colors.brown,
-                  unselectedColor: Colors.grey[200]),
+                  selectedColor: Colors.red,
+                  unselectedColor: Colors.black54),
               DotNavigationBarItem(
                   icon: Icon(Icons.library_books, size: 25),
-                  selectedColor: Colors.brown,
-                  unselectedColor: Colors.grey[200]),
+                  selectedColor: Color(0xff6540FF),
+                  unselectedColor: Colors.black54),
               DotNavigationBarItem(
                   icon: Icon(Icons.settings, size: 25),
-                  selectedColor: Colors.brown,
-                  unselectedColor: Colors.grey[200]),
+                  selectedColor: Colors.teal,
+                  unselectedColor: Colors.black54),
             ],
           ),
           backgroundColor: Colors.white,
