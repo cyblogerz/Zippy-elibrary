@@ -1,12 +1,16 @@
-class Book {
-  final String title;
-  final String author;
-  final String thumbnailUrl;
-  final String description;
+import 'package:flutter/material.dart';
+
+class Book with ChangeNotifier {
+  final String? title;
+  final String? author;
+  final String? rating;
+  final String? thumbnailUrl;
+  final String? description;
 
   Book(
       {required this.title,
       required this.author,
-      required this.thumbnailUrl,
-      required this.description});
+      this.rating,
+      this.thumbnailUrl,
+      this.description});
 }

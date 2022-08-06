@@ -1,8 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:zippy/apis/book_view.dart';
 import 'package:zippy/models/book.dart';
 import 'package:http/http.dart' as http;
+import 'package:zippy/pages/result_list.dart';
 import 'package:zippy/widgets/book_list_tile.dart';
 import 'package:zippy/widgets/book_tile.dart';
 
@@ -66,52 +68,8 @@ class CustomSearchDelegate extends SearchDelegate {
     );
   }
 
-  Future<List<Book>> _fetchBooks() async {
-    String url = 'https://www.googleapis.com/books/v1/volumes?q=$query'
-        '&key=AIzaSyAkHS0mQjY6viod7RRWULRjuPC1azZTADQ';
-    final res = await http.get(Uri.parse(url));
-    if (res.statusCode == 200) {
-      return _parseBookJson(res.body);
-    } else {
-      throw Exception('Error: ${res.statusCode}');
-    }
-  }
-
-  List<Book> _parseBookJson(String jsonStr) {
-    final jsonMap = json.decode(jsonStr);
-    final jsonList = (jsonMap['items'] as List);
-    return jsonList
-        .map((jsonBook) => Book(
-              title: jsonBook['volumeInfo']['title'].toString(),
-              author: (jsonBook['volumeInfo']['authors'] ?? [] as List)
-                  .elementAt(0)
-                  .toString(),
-              description: jsonBook['volumeInfo']['description'].toString(),
-              thumbnailUrl: jsonBook['volumeInfo']['imageLinks']
-                      ['smallThumbnail']
-                  .toString(),
-            ))
-        .toList();
-  }
-
   @override
-  Widget buildResults(BuildContext context) => Scaffold(
-        body: FutureBuilder(
-            future: _fetchBooks(),
-            builder: (context, AsyncSnapshot<List<Book>> snapshot) {
-              if (snapshot.connectionState == ConnectionState.done) {
-                if (snapshot.hasError) {
-                  return Center(child: Text('Error: ${snapshot.error}'));
-                } else {
-                  return ListView(
-                      children:
-                          snapshot.data!.map((b) => BookListTile(b)).toList());
-                }
-              } else {
-                return Center(child: CircularProgressIndicator());
-              }
-            }),
-      );
+  Widget buildResults(BuildContext context) => ResultList(query: query);
   // TODO: implement buildResults
 
   @override

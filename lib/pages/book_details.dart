@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
+// import 'package:zippy/apis/file_download.dart';
+import 'package:zippy/widgets/rating.dart';
+
+import '../models/book.dart';
 
 class BookDetailsPage extends StatelessWidget {
-  const BookDetailsPage({Key? key}) : super(key: key);
+  final Book book;
+
+  BookDetailsPage({Key? key, required this.book}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +22,58 @@ class BookDetailsPage extends StatelessWidget {
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.5,
               ),
-              Container(
-                color: Colors.white,
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height * 0.5,
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  color: Colors.white,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          book.title.toString(),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 24),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 14.0),
+                          child: Text(book.author.toString()),
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 10.0),
+                              child: SizedBox(width: 44, child: Rating()),
+                            ),
+                            Text("(52 Ratings)")
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          child: Text(
+                            "Description",
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                        ),
+                        ReadMoreText(
+                          book.description.toString(),
+                          trimLines: 2,
+                          colorClickableText: Colors.red,
+                          trimMode: TrimMode.Line,
+                          trimCollapsedText: 'Read more',
+                          trimExpandedText: 'Show less',
+                          moreStyle: TextStyle(
+                              overflow: TextOverflow.fade,
+                              color: Colors.blue,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // width: double.infinity,
+                  // height: MediaQuery.of(context).size.height * 0.5,
+                ),
               )
             ],
           ),
@@ -32,6 +87,25 @@ class BookDetailsPage extends StatelessWidget {
                 child: Icon(
                   Icons.favorite_rounded,
                 ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Padding(
+              padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.14),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.5,
+                height: MediaQuery.of(context).size.height * 0.3,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(
+                          book.thumbnailUrl.toString(),
+                        ),
+                        fit: BoxFit.cover),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(32)),
               ),
             ),
           ),

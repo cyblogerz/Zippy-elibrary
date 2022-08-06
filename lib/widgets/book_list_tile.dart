@@ -11,8 +11,12 @@ class BookListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.push(context,
-          MaterialPageRoute(builder: ((context) => BookDetailsPage()))),
+      onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: ((context) => BookDetailsPage(
+                    book: book,
+                  )))),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10),
         child: Row(
@@ -23,7 +27,7 @@ class BookListTile extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: Image.network(
-                  book.thumbnailUrl,
+                  book.thumbnailUrl.toString(),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -37,13 +41,13 @@ class BookListTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    book.title,
+                    book.title.toString(),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    book.author,
+                    book.author.toString(),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(color: Colors.blueGrey, fontSize: 12),
