@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
+import 'package:zippy/widgets/alert.dart';
 // import 'package:zippy/apis/file_download.dart';
 import 'package:zippy/widgets/rating.dart';
 
@@ -83,6 +84,8 @@ class BookDetailsPage extends StatelessWidget {
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold),
                           ),
+                          SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.2)
                         ],
                       ),
                     ),
@@ -169,7 +172,9 @@ class BookDetailsPage extends StatelessWidget {
                           RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32.0),
                   ))),
-                  onPressed: () {},
+                  onPressed: () {
+                    showAlertDialog(context);
+                  },
                   child: Padding(
                       padding: EdgeInsets.all(18),
                       child: Text('Start reading')),

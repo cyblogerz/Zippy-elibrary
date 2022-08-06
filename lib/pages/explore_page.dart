@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zippy/apis/pdf_api.dart';
+import 'package:zippy/utils/pdf_api.dart';
 import 'package:zippy/pages/pdf_view.dart';
 
 class Explore extends StatelessWidget {

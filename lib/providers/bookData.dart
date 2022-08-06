@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zippy/apis/book_view.dart';
+import 'package:zippy/utils/book_view.dart';
 
 import '../models/book.dart';
 
@@ -73,7 +73,16 @@ class BookData with ChangeNotifier {
     notifyListeners();
   }
 
+  void loadMore({required String query, required int indexNumber}) async {
+    // clearSearch();
+    List<Book> searchRes = await getBooksData(
+        'https://www.googleapis.com/books/v1/volumes?q=${query}&startIndex=$indexNumber');
+    _searchResults.addAll(searchRes);
+    notifyListeners();
+  }
+
   void clearSearch() {
     _searchResults.clear();
+    notifyListeners();
   }
 }

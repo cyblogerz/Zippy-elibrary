@@ -24,7 +24,7 @@ class Rating extends StatelessWidget {
         ],
       ),
       decoration: BoxDecoration(
-          color: Color.fromARGB(108, 212, 212, 212),
+          color: Color.fromARGB(255, 255, 255, 255),
           borderRadius: BorderRadius.circular(20)),
     );
   }

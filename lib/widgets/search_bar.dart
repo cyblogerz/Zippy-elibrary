@@ -1,12 +1,15 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:zippy/apis/book_view.dart';
+import 'package:provider/provider.dart';
+import 'package:zippy/utils/book_view.dart';
 import 'package:zippy/models/book.dart';
 import 'package:http/http.dart' as http;
 import 'package:zippy/pages/result_list.dart';
 import 'package:zippy/widgets/book_list_tile.dart';
 import 'package:zippy/widgets/book_tile.dart';
+
+import '../providers/bookData.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({Key? key}) : super(key: key);
@@ -64,6 +67,7 @@ class CustomSearchDelegate extends SearchDelegate {
 
   @override
   Widget? buildLeading(BuildContext context) {
+    var bData = Provider.of<BookData>(context, listen: false);
     return IconButton(
       icon: Icon(Icons.arrow_back),
       onPressed: () {
@@ -95,8 +99,8 @@ class CustomSearchDelegate extends SearchDelegate {
 }
 
 List<String> suggestions = [
-  'Wimpy kid',
-  'Think like a monk',
+  'manga',
+  'marvel',
   'Pride and prejudice',
   'Immortals of meluha'
 ];

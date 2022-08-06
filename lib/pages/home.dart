@@ -3,7 +3,7 @@ import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:zippy/apis/book_view.dart';
+import 'package:zippy/utils/book_view.dart';
 import 'package:zippy/pages/explore_page.dart';
 import 'package:zippy/pages/settings_page.dart';
 import 'package:zippy/providers/bookData.dart';
