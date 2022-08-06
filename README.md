@@ -7,7 +7,7 @@
 
 
 
-<p align="center"><a href="http://www.api.google.com/"><img src="./readme-assets/google.gif" width="50%"/></a></p>
+<p align="center"><a href="http://www.api.google.com/"><img src="./readme-assets/google.gif" width="80%"/></a></p>
 
 The Books included in the app are provided by the google books api.
 <br>
