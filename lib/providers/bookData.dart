@@ -19,9 +19,14 @@ class BookData with ChangeNotifier {
   List<Book> _novels = [];
   List<Book> _adventure = [];
   List<Book> _fantasy = [];
+  List<Book> _searchResults = [];
 
   List<Book> get trending {
     return [..._trendingBooks];
+  }
+
+  List<Book> get searchres {
+    return [..._searchResults];
   }
 
   List<Book> get novels {
@@ -58,5 +63,17 @@ class BookData with ChangeNotifier {
     List<Book> fantasyBooks = await getBooksData(fantasy_url);
     _fantasy.addAll(fantasyBooks);
     notifyListeners();
+  }
+
+  void addSearchres({required String query, required int indexNumber}) async {
+    clearSearch();
+    List<Book> searchRes = await getBooksData(
+        'https://www.googleapis.com/books/v1/volumes?q=${query}&startIndex=$indexNumber');
+    _searchResults.addAll(searchRes);
+    notifyListeners();
+  }
+
+  void clearSearch() {
+    _searchResults.clear();
   }
 }

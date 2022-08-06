@@ -28,10 +28,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.2
-  curved_navigation_bar: ^1.0.3
-  dio: ^4.0.6
   dot_navigation_bar: ^1.0.1+4
-  epub_view: ^3.0.0
   flutter:
     sdk: flutter
   google_fonts: ^3.0.1

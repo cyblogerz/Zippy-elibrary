@@ -20,9 +20,13 @@ class SearchBar extends StatelessWidget {
             {showSearch(context: context, delegate: CustomSearchDelegate())}),
         child: Container(
           padding: EdgeInsets.all(15),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(32),
-              color: Color(0xffF5F5F5)),
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(
+                color: Color.fromARGB(75, 158, 158, 158),
+                spreadRadius: 5,
+                blurRadius: 10,
+                offset: Offset(0, 5))
+          ], borderRadius: BorderRadius.circular(32), color: Color(0xffF5F5F5)),
           child: Row(
             children: <Widget>[
               Icon(
@@ -52,7 +56,7 @@ class CustomSearchDelegate extends SearchDelegate {
       IconButton(
         icon: Icon(Icons.clear),
         onPressed: () {
-          query = '';
+          Navigator.pop(context);
         },
       ),
     ];

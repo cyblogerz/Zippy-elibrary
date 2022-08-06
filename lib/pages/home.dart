@@ -1,4 +1,4 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+// import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -60,7 +60,7 @@ class _HomeState extends State<Home> {
             onTap: changePage,
             boxShadow: [
               BoxShadow(
-                  color: Colors.grey,
+                  color: Color.fromARGB(110, 158, 158, 158),
                   spreadRadius: 5,
                   blurRadius: 10,
                   offset: Offset(0, 5))
@@ -85,7 +85,11 @@ class _HomeState extends State<Home> {
           appBar: AppBar(
             // automaticallyImplyLeading: false,
             iconTheme: IconThemeData(color: Colors.black),
-            backgroundColor: Colors.transparent,
+            backgroundColor: Colors.white,
+            title: Text(
+              'Zippy',
+              style: TextStyle(color: Colors.black),
+            ),
             elevation: 0.0,
             actions: <Widget>[
               Padding(
@@ -124,10 +128,10 @@ class HomeBody extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
-          child: Text(
-            'Hello, Timmy!',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+          // child: Text(
+          //   'Hello, User!',
+          //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          // ),
         ),
         SearchBar(),
         Padding(
