@@ -11,8 +11,8 @@ import 'package:zippy/widgets/book_tile.dart';
 
 import '../providers/bookData.dart';
 
-class SearchBar extends StatelessWidget {
-  const SearchBar({Key? key}) : super(key: key);
+class MySearchBar extends StatelessWidget {
+  const MySearchBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
