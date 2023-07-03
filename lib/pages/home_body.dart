@@ -25,7 +25,7 @@ class HomeBody extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
         ),
-        SearchBar(),
+        // SearchBar(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16),
           child: Text(
